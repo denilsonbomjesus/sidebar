@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sidebar</title>
+    <link rel="stylesheet" href="style.css"> <!-- Referência para o arquivo CSS -->
+</head>
+<body>
+    <div class="main-container">
+        <!-- Cabeçalho -->
+        <header>
+            <h1>Siderbar</h1>
+        </header>
+
+        <!-- Itens Salvos -->
+        <div class="saved-items">
+            <!-- <h2>Itens Salvos</h2> -->
+            <div id="saved-coords-container"></div>
+        </div>
+
+        <!-- Corpo Principal -->
+        <div class="layout">
+            <!-- Menu Lateral -->
+            <aside class="sidebar" id="sidebar">
+                <div style="display: flex; justify-content: flex-end; align-items: center; margin-bottom: 1rem;">
+                    <button id="toggle-sidebar">&gt;</button>
+                </div>
+                <h2>Tipo de Teste</h2>
+                <select id="pro-reitoria-dropdown">
+                    <option value="" selected>Selecionar Tipo de Teste</option>
+                    <option value="Teste 1">Teste 1</option>
+                    <option value="Teste 2">Teste 2</option>
+                    <option value="Teste 3">Teste 3</option>
+                </select>
+                <div id="coordenacoes-container"></div>
+            </aside>
+
+            <!-- Área do Canva -->
+            <main class="canva-container">
+                <canvas id="main-canva"></canvas>
+            </main>
+        </div>
+    </div>
+    <script src="script.js"></script> <!-- Referência para o arquivo JavaScript -->
+</body>
+</html>

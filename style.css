@@ -1,0 +1,144 @@
+/* Estilo básico */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    height: 100%;
+}
+
+.main-container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+header {
+    background-color: #007bff;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+}
+
+.saved-items {
+    background-color: #f8f9fa;
+    padding: 0.5rem 1rem;
+    border-bottom: 1px solid #ddd;
+    overflow-x: auto;
+    white-space: nowrap;
+}
+
+.saved-items h2 {
+    margin: 0;
+    font-size: 1rem;
+    display: inline-block;
+    margin-right: 1rem;
+}
+
+.saved-items div {
+    display: inline-block;
+    background-color: #6c757d;
+    color: white;
+    padding: 0.5rem 1rem;
+    margin-right: 0.5rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.saved-items div .remove {
+    margin-left: 0.5rem;
+    color: red;
+    cursor: pointer;
+}
+
+.layout {
+    display: flex;
+    flex: 1;
+}
+
+.sidebar {
+    width: 20%;
+    background-color: #f8f9fa;
+    padding: 1rem;
+    border-right: 1px solid #ddd;
+    overflow-y: auto;
+    transition: all 0.5s ease;
+}
+
+.sidebar.minimized {
+    width: 5%;
+}
+
+.sidebar h2,
+.sidebar select,
+.sidebar .coordination {
+    transition: opacity 0.3s ease;
+}
+
+.sidebar.minimized h2,
+.sidebar.minimized select,
+.sidebar.minimized .coordination {
+    opacity: 0;
+}
+
+.sidebar h2 {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+#pro-reitoria-dropdown {
+    width: 100%;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+#coordenacoes-container {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.coordination {
+    background-color: #007bff;
+    color: white;
+    padding: 0.5rem;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+}
+
+.canva-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #e9ecef;
+}
+
+#main-canva {
+    width: 90%;
+    height: 90%;
+    background-color: white;
+    border: 1px solid #ccc;
+}
+
+#toggle-sidebar {
+    position: relative;
+    top: 0;
+    right: 0;
+    margin: 0;
+    background-color: #007bff;
+    color: white;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.sidebar.minimized #toggle-sidebar {
+    transform: rotate(180deg);
+}
