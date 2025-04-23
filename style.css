@@ -65,7 +65,7 @@ header {
 }
 
 .sidebar.minimized {
-    width: 5%;
+    width: 3%;
 }
 
 .sidebar h2,
@@ -78,6 +78,7 @@ header {
 .sidebar.minimized select,
 .sidebar.minimized .coordination {
     opacity: 0;
+    overflow: hidden;
 }
 
 .sidebar h2 {
